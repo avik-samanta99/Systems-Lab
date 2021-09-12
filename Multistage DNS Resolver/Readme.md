@@ -1,6 +1,4 @@
-**Steps followed to implement Multi-stage DNS Resolving System using**
-
-**Client-Server socket programming-**
+**Steps followed to implement Multi-stage DNS Resolving System using Client-Server socket programming-**
 
 1. We have implemented 3 programs, namely, client.c, ProxyServer.c and DNSServer.c
 
