@@ -1,38 +1,14 @@
-﻿
-
-**CS558: Computer Systems Lab**
-
-**Assignment-3 - Socket Programming**
-
-**Group Number – 4**
-
-**Group members:**
-
-\1. Bhaskar Sharma : 204101018
-
-\2. Avik Samanta
-
-\3. Ashish kumar
-
-\4. Rahul Ballani
-
-: 204101016
-
-: 204101015
-
-: 204101017
-
-**We have done following steps to implement Multi-stage DNS Resolving System using**
+**Steps followed to implement Multi-stage DNS Resolving System using**
 
 **Client-Server socket programming-**
 
-\1. We have implemented 3 programs, namely, client.c, ProxyServer.c and DNSServer.c
+1. We have implemented 3 programs, namely, client.c, ProxyServer.c and DNSServer.c
 
-\2. Open 3 terminals (where one terminal will behave like a client, second one will behave like
+2. Open 3 terminals (where one terminal will behave like a client, second one will behave like
 
 proxy server and third terminal will behave like a DNS server).
 
-\3. Compile 3 programs as follows.
+3. Compile 3 programs as follows.
 
 ➢ **g++ -o dns\_server DNSServer.cpp**
 
@@ -40,11 +16,11 @@ proxy server and third terminal will behave like a DNS server).
 
 ➢ **g++ -o client Client.cpp**
 
-\4. Now, there will be 3 executable files dns\_server, proxy\_server, and client, that will be
+4. Now, there will be 3 executable files dns\_server, proxy\_server, and client, that will be
 
 created.
 
-\5. While running DNSServer.c we have to input the DNS server's port, running ProxyServer.c
+5. While running DNSServer.c we have to input the DNS server's port, running ProxyServer.c
 
 requires us to input the Proxy Server's port, and while running client.c, we have to input the
 
@@ -52,13 +28,13 @@ IP address and the Port of the proxy server(we have considered all the 3 program
 
 the local host, i.e. 127.0.0.1).
 
-\6. To execute the 3 programs, we need to run the following commands, in the respective
+6. To execute the 3 programs, we need to run the following commands, in the respective
 
 windows:
 
-➢ **$ ./dns\_server 4201**
+➢ **$ ./dns_server 4201**
 
-➢ **$ ./proxy\_server 4200**
+➢ **$ ./proxy_server 4200**
 
 ➢ **$ ./client 127.0.0.1 4200**
 
@@ -66,11 +42,11 @@ windows:
 
 
 
-\7. This assigns the port number 4200 to the dns server, and 4201 to the proxy server, and tells
+7. This assigns the port number 4200 to the dns server, and 4201 to the proxy server, and tells
 
 the client program, the IP address(127.0.0.1) and the port number(4201) of the proxy server.
 
-\8. Request can be of two types.(Type1 & Type 2)
+8. Request can be of two types.(Type1 & Type 2)
 
 ➢ **Type 1** Message field contains Domain Name and requests for corresponding IP
 
@@ -80,7 +56,7 @@ address.
 
 Name.
 
-\9. If the proxy cache doesn't contain an entry corresponding to the requested domain name/IP
+9. If the proxy cache doesn't contain an entry corresponding to the requested domain name/IP
 
 address, then the proxy server will ask the user to input the DNS server's IP address and port
 
@@ -98,19 +74,19 @@ service the request, which the proxy server will forward to the client program.
 
 
 
-\10. If the proxy cache contains an entry corresponding to the requested domain name/IP
+10. If the proxy cache contains an entry corresponding to the requested domain name/IP
 
 address, the proxy server program sends back the data to the client program.
 
-\11. If a corresponding entry exists, the DNS server will send the required data to the proxy
+11. If a corresponding entry exists, the DNS server will send the required data to the proxy
 
 server, which will now update it's proxy cache using the FIFO algorithm, and then it forwards
 
 the data to the client program.
 
-\12. Screenshot of the Type-2 request-
+12. Screenshot of the Type-2 request-
 
-\13. We have implemented the proxy cache and the DNS database as text programs with the
+13. We have implemented the proxy cache and the DNS database as text programs with the
 
 names serverCache.txt and DNSDatabase.txt.
 
